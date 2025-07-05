@@ -1,6 +1,6 @@
 services:
   wppconnect:
-    image: ghcr.io/wppconnect-team/wppconnect-server:latest
+    image: wppconnect-team/wppconnect-server:latest
     restart: always
     ports:
       - '0.0.0.0:3131:21465'  # API
