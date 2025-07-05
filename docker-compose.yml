@@ -1,6 +1,6 @@
 services:
   wppconnect:
-    image: wppconnect-team/wppconnect-server:latest
+    image: ghcr.io/wppconnect-team/wppconnect-server:latest
     container_name: wppconnect-server
     restart: always
     ports:
