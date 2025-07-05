@@ -1,15 +1,16 @@
 services:
   wppconnect:
-    image: wppconnect/server:latest
+    image: devwppconnect/wppconnect-server:latest
+    container_name: wppconnect-server
     restart: always
     ports:
-      - '0.0.0.0:3131:21465'  # API
-      - '0.0.0.0:3132:3000'   # Painel
+      - '3131:21465'  # API
+      - '3132:3000'   # Painel
     environment:
       PORT: 21465
       DEBUG: 'true'
       MAX_ATTACHMENT_SIZE: 20
-      TOKEN_SECRET: minhascretkeysegura
+      TOKEN_SECRET: minhasecretkeysegura
       JWT_SECRET: minhajwtsegura
       DATABASE_URL: file:./db.sqlite
       CREATE_ADMIN: 'true'
